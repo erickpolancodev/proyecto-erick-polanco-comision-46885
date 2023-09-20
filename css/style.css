@@ -11,11 +11,11 @@ body {
 }
 /*------------HEADER--------------*/
 header {
-    display: flex;
+    /*display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    flex-wrap: wrap;
+    flex-wrap: wrap;*/
 }
 header h1{
     font-size: 40px;
@@ -69,10 +69,10 @@ header nav ul .active a{
     padding: 20px;
 }
 .marcas .contenedor-marcas{
-    display: flex;
+    /*display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap;*/
 }
 
 .marcas .contenedor-marcas .item img{
