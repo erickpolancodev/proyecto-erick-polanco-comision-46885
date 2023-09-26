@@ -46,63 +46,80 @@
         <section class="destacado container-fluid">
             <h2 class="my-0">CONTACTO</h2>
         </section>
-        <section class="contenedor-contacto">
-            <div class="mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62774.48353665737!2d-66.93158422066544!3d10.468687044463769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a58adcd824807%3A0x93dd2eae0a998483!2sCaracas%2C%20Distrito%20Capital!5e0!3m2!1ses!2sve!4v1693687533258!5m2!1ses!2sve" width="300" height="440" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="formulario">
-                <form action="" method="post" enctype="" autocomplete="off">
-                    <div>
-                        <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre">
-                    </div>
-                    <div>
-                        <label for="apellido">Apellido</label>
-                        <input type="text" name="apellido" id="apellido">
-                    </div>
-                    <div>
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" name="telefono" id="telefono">
-                    </div>
-                    <div>
-                        <label for="email">E-mail</label>
-                        <input type="text" name="email" id="email">
-                    </div>
-                    <div>
-                        <label for="genero">Género</label>
-                        <div>
-                            <label for="masculino">Masculino</label>
-                            <input type="radio" name="genero" id="">
         
-                            <label for="femenino">Femenino</label>
-                            <input type="radio" name="genero" id="">
-        
-                            <label for="otro">otro</label>
-                            <input type="radio" name="genero" id="">
+        <section class="container">
+            <div class="row contenedor-contacto justify-content-center">
+                <div class="col-lg-6 col-md-6 col-sm-12 mapa mx-auto">
+                    <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62774.48353665737!2d-66.93158422066544!3d10.468687044463769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a58adcd824807%3A0x93dd2eae0a998483!2sCaracas%2C%20Distrito%20Capital!5e0!3m2!1ses!2sve!4v1693687533258!5m2!1ses!2sve" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 formulario mx-auto">
+                    <form action="" method="post" enctype="" autocomplete="off">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <label class="form-label" for="nombre">Nombre</label>
+                                <input class="form-control" type="text" name="nombre" id="nombre">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <label class="form-label" for="apellido">Apellido</label>
+                                <input class="form-control" type="text" name="apellido" id="apellido">
+                            </div>
                         </div>
-                    </div>
-        
-                    <div>
-                        <label for="pais">País</label>
-                        <select name="pais" id="pais">
-                            <option value="Venezuela">Venezuela</option>
-                            <option value="Colombia">Colombia</option>
-                            <option value="Argentina">Argentina</option>
-                            <option value="USA">USA</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="Comentario">Comentario</label>
-                        <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
-                    </div>
-        
-                    <div>
-                        <input type="submit" >
-                        <input type="reset">
-                    </div>
-                </form>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <label class="form-label" for="telefono">Teléfono</label>
+                                <input class="form-control" type="tel" name="telefono" id="telefono">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <label class="form-label" for="email">E-mail</label>
+                                <input class="form-control" type="text" name="email" id="email">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="form-label" for="genero">Género</label>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <label class="form-label" for="masculino">Masculino</label>
+                                    <input class="form-check-input" type="radio" name="genero" id="">
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <label class="form-label" for="femenino">Femenino</label>
+                                    <input class="form-check-input" type="radio" name="genero" id="">
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <label class="form-label" for="otro">otro</label>
+                                    <input class="form-check-input" type="radio" name="genero" id="">
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div>
+                            <label class="form-label" for="pais">País</label>
+                            <select name="pais" id="pais" class="form-select">
+                                <option value="Venezuela">Venezuela</option>
+                                <option value="Colombia">Colombia</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="USA">USA</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="form-label" for="Comentario">Comentario</label>
+                            <textarea name="comentario" id="comentario" class="form-control" cols="30" rows="10"></textarea>
+                        </div>
+            
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <input class="form-control btn btn-light my-3" type="submit" >
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <input class="form-control btn btn-light my-3" type="reset">
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </section>       
+        </section>
+        
 
     </main>
 

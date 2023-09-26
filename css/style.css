@@ -6,7 +6,7 @@
     box-sizing: border-box;/* le decimos a los elementos que no modifique su tamaño al momento de usar margin y padding */
 }
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
     line-height: 1.5;
 }
 /*------------HEADER--------------*/
@@ -34,7 +34,7 @@ header nav ul li a {
     color: gray;
     margin: 5px 10px 5px 10px;
 }
-header nav ul .active a{
+header nav ul a.active, header nav ul li a:hover{
     color: #050557;
     font-weight: bold;
 }
@@ -68,12 +68,6 @@ header nav ul .active a{
 .marcas{
     padding: 20px;
 }
-.marcas .contenedor-marcas{
-    /*display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;*/
-}
 
 .marcas .contenedor-marcas .item img{
     width: 150px;
@@ -83,20 +77,13 @@ header nav ul .active a{
     padding: 20px;
 }
 
-.productos .dos-columnas{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
 .productos .dos-columnas .item{
     height: 300px;
-    width: 46%;
     background-color: #f9f9f9;
     background-image: url("../img/fondo-items-productos.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    margin: 20px;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -105,15 +92,9 @@ header nav ul .active a{
 .productos .dos-columnas .item h3{
     font-size: 30px;
 }
-.productos .cuatro-columnas{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+
 .productos .cuatro-columnas .item{
-    width: 320px;
     height: auto;
-    margin: 20px;
     padding: 20px;
     background-color: white;
     border: 3px solid #f9f9f9;
@@ -122,6 +103,9 @@ header nav ul .active a{
     width: 100%;
     height: auto;
     margin-bottom: 10px;
+}
+.productos .cuatro-columnas h3{
+    font-size: 30px;
 }
 .productos .dos-columnas .item a, .productos .cuatro-columnas .item a{
     background-color: #050557;
@@ -214,13 +198,11 @@ header nav ul .active a{
 
 .contenedor-contacto .mapa{
     padding: 20px;
-    border: 2px solid #f9f9f9;
-    height: 484px;
+    height: 600px;
 }
 .contenedor-contacto .formulario{
     padding: 20px;
     background-color: #050557;
-    border: 2px solid #f9f9f9;
 }
 .contenedor-contacto .formulario form input, 
 .contenedor-contacto .formulario form textarea,
@@ -231,7 +213,6 @@ header nav ul .active a{
 }
 .contenedor-contacto .formulario form label{
     color: white;
-    margin-right: 5px;
 }
 /*------------FOOTER--------------*/
 footer{
@@ -253,4 +234,16 @@ footer .copyright {
     color: white;
     text-align: center;
     padding: 10px 0px;
+}
+
+@media screen and (max-width: 768px){
+    .productos .cuatro-columnas h3, .productos .dos-columnas .item h3{
+        font-size: 25px;
+    }
+    .productos .cuatro-columnas h4, .productos .dos-columnas .item h4{
+        font-size: 20px;
+    }
+    .contenedor-contacto{
+        flex-direction: column-reverse;
+    }
 }
