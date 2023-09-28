@@ -296,4 +296,7 @@ footer .copyright p{
     .nosotros-video{
         grid-column: span 1;
     }
+    footer .sub-footer a i{
+        font-size: 1.8em;
+    }
 }
