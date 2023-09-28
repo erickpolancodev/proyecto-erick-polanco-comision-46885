@@ -12,15 +12,13 @@ body {
 /*------------HEADER--------------*/
 header h1{
     font-size: 40px;
+    font-weight: 700;
     color: #050557;
 }
 header nav ul{
     list-style: none;
     margin: 10px;
     display: flex;
-}
-header nav ul li {
-
 }
 header nav ul li a {
     text-decoration: none;
@@ -40,13 +38,16 @@ header nav ul a.active, header nav ul li a:hover{
     align-items: center;
 }
 .hero .hero-contenido{
-    padding: 0 20px;
+    padding: 0 110px;
 }
 .hero img{
     height: 340px;
 }
 .hero h2{
-    font-size: 50px;
+    font-size: 70px;
+}
+.hero p{
+    font-size: 25px;
 }
 .destacado{
     width: 100%;
@@ -159,53 +160,38 @@ header nav ul a.active, header nav ul li a:hover{
 }
 
 /* -------- nOSOTROS ------------- */
-.contenedor-nosotros{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.contenedor-nosotros div{
-    width: 400px;
-    padding: 20px;
-}
 .contenedor-nosotros div p{
     margin-bottom: 5px;
 }
+.contenedor-grid{
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 300px 400px;
+    grid-template-areas: 
+    "fotos fotos fotos"
+    "fotos video video";
+    gap: 15px;
+}
+.contenedor-grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-.video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nosotros-fotos{
+    grid-area: "fotos";
+}
+.nosotros-video{
+    grid-area: "video";
+    grid-column: span 2
 }
 
 /* -------- cONTACTO ------------- */
-.contenedor-contacto{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.contenedor-contacto form div {
-    margin-bottom: 10px;
-}
-
-.contenedor-contacto .mapa{
-    padding: 20px;
-    height: 600px;
-}
 .contenedor-contacto .formulario{
-    padding: 20px;
-    background-color: #050557;
+    background-color:#050557;
 }
-.contenedor-contacto .formulario form input, 
-.contenedor-contacto .formulario form textarea,
-.contenedor-contacto .formulario form select{
-    padding: 3px;
-    border: none;
-    color: #050557;
-}
-.contenedor-contacto .formulario form label{
+.contenedor-contacto .formulario label{
     color: white;
 }
 /*------------FOOTER--------------*/
@@ -229,8 +215,37 @@ footer .copyright {
     text-align: center;
     padding: 10px 0px;
 }
+footer .copyright p{
+    margin-bottom: 0px;
+}
 
-@media screen and (max-width: 768px){
+/* desktop pequena */
+@media screen and (max-width: 1390px){
+    .contenedor-grid{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 300px 300px 400px;
+        grid-template-areas: 
+        "fotos fotos"
+        "fotos fotos"
+        "video video";
+    }
+    .nosotros-img{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+/* MEDIA QUERIES PARA TABLET*/
+@media screen and (max-width: 991px){
+    .hero .hero-contenido{
+        padding: 0 56px;
+    }
+    .hero h2{
+        font-size: 40px;
+    }
+    .hero p{
+        font-size: 16px;
+    }
     .productos .cuatro-columnas h3, .productos .dos-columnas .item h3{
         font-size: 25px;
     }
@@ -239,5 +254,27 @@ footer .copyright {
     }
     .contenedor-contacto{
         flex-direction: column-reverse;
+    }
+}
+/* MEDIA QUERIES PARA MOBILE */
+@media screen and (max-width: 575px){
+    .hero .hero-contenido{
+        padding: 0 16px;
+    }
+    .hero h2{
+        font-size: 30px;
+    }
+    .contenedor-grid{
+        grid-template-columns:1fr;
+        grid-template-rows: 300px 300px 300px 300px 400px;
+        grid-template-areas: 
+        "fotos"
+        "fotos"
+        "fotos"
+        "fotos"
+        "video";
+    }
+    .nosotros-video{
+        grid-column: span 1;
     }
 }
