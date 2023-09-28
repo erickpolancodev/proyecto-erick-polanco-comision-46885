@@ -110,6 +110,10 @@ header nav ul a.active, header nav ul li a:hover{
     padding: 5px 10px;
     text-decoration: none;
 }
+.productos .dos-columnas .item a:hover, .productos .cuatro-columnas .item a:hover{
+    background-color: #01759f;
+}
+
 .productos .dos-columnas .item h4, .productos .cuatro-columnas .item h4{
     margin: 10px 0;
     font-weight: 400;
