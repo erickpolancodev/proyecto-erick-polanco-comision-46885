@@ -1,0 +1,24 @@
+footer{
+    margin-top: 40px;
+    .sub-footer{
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        a{
+            color: #050557;
+            margin: 0 10px;
+        }
+    }
+    .copyright {
+        background-color: #050557;
+        color: white;
+        text-align: center;
+        padding: 10px 0px;
+        p{
+            margin-bottom: 0px;
+        }
+    }
+    
+}

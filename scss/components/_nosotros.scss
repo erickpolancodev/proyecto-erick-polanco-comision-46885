@@ -1,0 +1,32 @@
+.contenedor-nosotros{
+    div{
+        div{
+            p{
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+.contenedor-grid{
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 300px 400px;
+    grid-template-areas: 
+    "fotos fotos fotos"
+    "fotos video video";
+    gap: 15px;
+    .nosotros-fotos{
+        grid-area: "fotos";
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .nosotros-video{
+        grid-area: "video";
+        grid-column: span 2
+    }
+    
+}
