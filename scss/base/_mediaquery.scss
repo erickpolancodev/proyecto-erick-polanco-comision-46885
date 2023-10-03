@@ -1,0 +1,108 @@
+@media screen and (max-width: 1390px){
+    .contenedor-grid{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 300px 300px 400px;
+        grid-template-areas: 
+        "fotos fotos"
+        "fotos fotos"
+        "video video";
+    }
+    .nosotros-img{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+/* MEDIA QUERIES PARA TABLET*/
+@media screen and (max-width: 991px){
+    .hero{
+        .hero-contenido{
+            padding: 0 56px;
+            h2{
+                font-size: 40px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+        .hero-image{
+            img{
+                max-width: 240px;
+            }
+        }
+    }
+
+    .productos{
+        .dos-columnas{
+            .item{
+                h3{
+                    font-size: 25px; 
+                }
+                h4{
+                    font-size: 20px;
+                }
+            }
+        }
+        .cuatro-columnas{
+            .item{
+                h3{
+                    font-size: 25px; 
+                }
+                h4{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .contenedor-contacto{
+        flex-direction: column-reverse;
+    }
+}
+
+/* MEDIA QUERIES PARA MOBILE */
+@media screen and (max-width: 575px){
+    .hero{
+        .hero-contenido{
+            padding: 0 16px;
+            text-align: center;
+            width: 100%;
+        }
+        .hero-image{
+            text-align: center;
+            width: 100%;
+            img{
+                content: url('../img/iphone-15-destacado.png');
+            }
+        }
+    }
+    .productos{
+        .dos-columnas{
+            .item{
+                img{
+                    max-width: 170px;
+                }
+            }
+        }
+    }
+    .contenedor-grid{
+        grid-template-columns:1fr;
+        grid-template-rows: 300px 300px 300px 300px 400px;
+        grid-template-areas: 
+        "fotos"
+        "fotos"
+        "fotos"
+        "fotos"
+        "video";
+    }
+    .nosotros-video{
+        grid-column: span 1;
+    }
+    footer{
+        .sub-footer{
+            a{
+                i{
+                    font-size: 1.8em;
+                }
+            }
+        }
+    }
+}
