@@ -1,6 +1,14 @@
 @charset "UTF-8";
 /* se declaran variables, listas y mapas */
+/* Variables de color */
+/*Extendes*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;0,800;1,100&family=Poppins:ital,wght@0,100;0,400;1,100;1,400;1,600&display=swap");
+.hero, .productos .dos-columnas .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+/* Mixin */
 /*------------RESET--------------*/
 * {
   padding: 0;
@@ -9,7 +17,7 @@
   /* le decimos a los elementos que no modifique su tamaño al momento de usar margin y padding */ }
 
 body {
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
   line-height: 1.5; }
 
 .destacado {
@@ -42,9 +50,6 @@ header nav ul {
 .hero {
   background-color: #f9f9f9;
   height: 350px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap; }
   .hero .hero-contenido {
     padding: 0 110px; }
@@ -70,9 +75,10 @@ header nav ul {
     background-size: cover;
     background-attachment: fixed;
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
+    transition-property: box-shadow;
+    transition-duration: 1s; }
+    .productos .dos-columnas .item:hover {
+      box-shadow: 1px 1px 4px #f9f9f9; }
     .productos .dos-columnas .item h3 {
       font-size: 30px; }
     .productos .dos-columnas .item h4 {
@@ -89,14 +95,20 @@ header nav ul {
       color: white;
       text-transform: uppercase;
       padding: 5px 10px;
-      text-decoration: none; }
+      text-decoration: none;
+      transition-property: background-color;
+      transition-duration: 1s; }
       .productos .dos-columnas .item a:hover {
         background-color: #01759f; }
   .productos .cuatro-columnas .item {
     height: auto;
     padding: 20px;
     background-color: white;
-    border: 3px solid #f9f9f9; }
+    border: 3px solid #f9f9f9;
+    transition-property: box-shadow;
+    transition-duration: 1s; }
+    .productos .cuatro-columnas .item:hover {
+      box-shadow: 1px 1px 4px #f9f9f9; }
     .productos .cuatro-columnas .item img {
       width: 100%;
       height: auto;
@@ -111,7 +123,9 @@ header nav ul {
       color: white;
       text-transform: uppercase;
       padding: 5px 10px;
-      text-decoration: none; }
+      text-decoration: none;
+      transition-property: background-color;
+      transition-duration: 1s; }
       .productos .cuatro-columnas .item a:hover {
         background-color: #01759f; }
 
@@ -121,7 +135,11 @@ header nav ul {
   right: 5px;
   background-color: #050557;
   border-radius: 50%;
-  padding: 12px; }
+  padding: 12px;
+  transition-property: background-color;
+  transition-duration: 1s; }
+  .fixed:hover {
+    background-color: #01759f; }
   .fixed a {
     text-decoration: none;
     color: white !important; }
@@ -134,16 +152,22 @@ header nav ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 300px 400px;
-  grid-template-areas: "fotos fotos fotos" "fotos video video";
+  grid-template-areas: "fotos1 fotos2 fotos3" "fotos4 video video";
   gap: 15px; }
-  .contenedor-grid .nosotros-fotos {
-    grid-area: "fotos"; }
-    .contenedor-grid .nosotros-fotos img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
+  .contenedor-grid .nosotros-fotos-1 img, .contenedor-grid .nosotros-fotos-2 img, .contenedor-grid .nosotros-fotos-3 img, .contenedor-grid .nosotros-fotos-4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .contenedor-grid .nosotros-fotos-1 {
+    grid-area: fotos1; }
+  .contenedor-grid .nosotros-fotos-2 {
+    grid-area: fotos2; }
+  .contenedor-grid .nosotros-fotos-3 {
+    grid-area: fotos3; }
+  .contenedor-grid .nosotros-fotos-4 {
+    grid-area: fotos4; }
   .contenedor-grid .nosotros-video {
-    grid-area: "video";
+    grid-area: video;
     grid-column: span 2; }
 
 .contenedor-servicios {
@@ -186,7 +210,11 @@ footer {
     padding: 10px 20px; }
     footer .sub-footer a {
       color: #050557;
-      margin: 0 10px; }
+      margin: 0 10px;
+      transition-property: color;
+      transition-duration: 1s; }
+      footer .sub-footer a:hover {
+        color: #01759f; }
   footer .copyright {
     background-color: #050557;
     color: white;
@@ -199,7 +227,7 @@ footer {
   .contenedor-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 300px 300px 400px;
-    grid-template-areas: "fotos fotos" "fotos fotos" "video video"; }
+    grid-template-areas: "fotos1 fotos2" "fotos3 fotos4" "video video"; }
   .nosotros-img {
     grid-column: span 1;
     grid-row: span 1; } }
@@ -241,8 +269,14 @@ footer {
   .contenedor-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 300px 300px 300px 300px 400px;
-    grid-template-areas: "fotos" "fotos" "fotos" "fotos" "video"; }
+    grid-template-areas: "fotos1" "fotos2" "fotos3" "fotos4" "video";
+    grid-gap: 0;
+    row-gap: 10px; }
   .nosotros-video {
-    grid-column: span 1; }
+    grid-column: span 1;
+    grid-row: span 1; }
+  .nosotros-img {
+    grid-column: span 1;
+    grid-row: span 1; }
   footer .sub-footer a i {
     font-size: 1.8em; } }

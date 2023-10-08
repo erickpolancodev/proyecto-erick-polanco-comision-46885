@@ -1,1 +1,18 @@
 /* se declaran variables, listas y mapas */
+$tipografia-principal: 'Montserrat', sans-serif !important;
+$tiempo-animacion: 1s;
+/* Variables de color */
+$colores: black,gray,#f9f9f9,#050557,#01759f,rgba(5, 5, 87, 0.7),white;
+
+/*Extendes*/
+%flex-sp-btw-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Mixin */
+@mixin animacion ($prop, $tiempo-animacion){
+    transition-property: $prop;
+    transition-duration: $tiempo-animacion;
+}

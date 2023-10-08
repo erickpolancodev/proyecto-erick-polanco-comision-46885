@@ -13,19 +13,32 @@
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 300px 400px;
     grid-template-areas: 
-    "fotos fotos fotos"
-    "fotos video video";
+    "fotos1 fotos2 fotos3"
+    "fotos4 video video";
     gap: 15px;
-    .nosotros-fotos{
-        grid-area: "fotos";
+
+    .nosotros-fotos-1,.nosotros-fotos-2,.nosotros-fotos-3,.nosotros-fotos-4{
         img{
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
+    .nosotros-fotos-1{
+        grid-area: fotos1;
+    }
+    .nosotros-fotos-2{
+        grid-area: fotos2;
+    }
+    .nosotros-fotos-3{
+        grid-area: fotos3;
+    }
+    .nosotros-fotos-4{
+        grid-area: fotos4;
+    }
+
     .nosotros-video{
-        grid-area: "video";
+        grid-area: video;
         grid-column: span 2
     }
     

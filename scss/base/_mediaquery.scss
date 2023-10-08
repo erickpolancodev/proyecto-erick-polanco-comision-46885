@@ -3,8 +3,8 @@
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: 300px 300px 400px;
         grid-template-areas: 
-        "fotos fotos"
-        "fotos fotos"
+        "fotos1 fotos2"
+        "fotos3 fotos4"
         "video video";
     }
     .nosotros-img{
@@ -84,17 +84,24 @@
         }
     }
     .contenedor-grid{
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 300px 300px 300px 300px 400px;
-        grid-template-areas: 
-        "fotos"
-        "fotos"
-        "fotos"
-        "fotos"
+        grid-template-areas:
+        "fotos1"
+        "fotos2"
+        "fotos3"
+        "fotos4"
         "video";
+        grid-gap:0;
+        row-gap: 10px;
     }
     .nosotros-video{
         grid-column: span 1;
+        grid-row: span 1;
+    }
+    .nosotros-img{
+        grid-column: span 1;
+        grid-row: span 1;
     }
     footer{
         .sub-footer{

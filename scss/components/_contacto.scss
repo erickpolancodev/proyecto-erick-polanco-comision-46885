@@ -1,8 +1,8 @@
 .contenedor-contacto {
     .formulario{
-        background-color:#050557;
+        background-color:nth($colores,4);
         label{
-            color: white;
+            color: nth($colores,7);
         }
     }
 

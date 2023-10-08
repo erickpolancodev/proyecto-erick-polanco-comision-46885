@@ -1,14 +1,13 @@
 .hero{
-    background-color: #f9f9f9;
+    background-color: nth($colores,3);
     height: 350px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @extend %flex-sp-btw-center;
     flex-wrap: wrap;
     .hero-contenido{
         padding: 0 110px;
         h2{
             font-size: 70px;
+            
         }
         p{
             font-size: 25px;
@@ -36,15 +35,17 @@
     .dos-columnas{
         .item{
             height: 300px;
-            background-color: #f9f9f9;
+            background-color: nth($colores,3);
             background-image: url("../img/fondo-items-productos.png");
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
             padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @extend %flex-sp-btw-center;
+            @include animacion (box-shadow,$tiempo-animacion);
+                &:hover{
+                    box-shadow: 1px 1px 4px nth($colores,3);
+                }
             h3{
                 font-size: 30px;
             }
@@ -60,14 +61,15 @@
                 max-height: 300px;
             }
             a{
-                background-color: #050557;
-                color: white;
+                background-color: nth($colores,4);
+                color: nth($colores,7);
                 text-transform: uppercase;
                 padding: 5px 10px;
                 text-decoration: none;
-                &:hover{
-                    background-color: #01759f;
-                }
+                @include animacion (background-color,$tiempo-animacion);
+                    &:hover{
+                        background-color: nth($colores,5);
+                    }
             }
         }
     }
@@ -75,8 +77,12 @@
         .item{
             height: auto;
             padding: 20px;
-            background-color: white;
-            border: 3px solid #f9f9f9;
+            background-color: nth($colores,7);
+            border: 3px solid nth($colores,3);
+            @include animacion (box-shadow,$tiempo-animacion);
+                &:hover{
+                    box-shadow: 1px 1px 4px nth($colores,3);
+                }
             img{
                 width: 100%;
                 height: auto;
@@ -90,14 +96,15 @@
                 font-weight: 400;
             }
             a{
-                background-color: #050557;
-                color: white;
+                background-color: nth($colores,4);
+                color: nth($colores,7);
                 text-transform: uppercase;
                 padding: 5px 10px;
                 text-decoration: none;
-                &:hover{
-                    background-color: #01759f;
-                }
+                @include animacion (background-color,$tiempo-animacion);
+                    &:hover{
+                        background-color: nth($colores,5);
+                    }
             }
         }
     }
@@ -107,11 +114,15 @@
     position: fixed;
     bottom: 130px;
     right: 5px;
-    background-color: #050557;
+    background-color: nth($colores,4);
     border-radius: 50%;
     padding: 12px;
+    @include animacion (background-color,$tiempo-animacion);
+        &:hover{
+            background-color: nth($colores,5);
+        }
     a{
         text-decoration: none;
-        color: white !important;
+        color: nth($colores,7) !important;
     }
 }
